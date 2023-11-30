@@ -16,6 +16,7 @@
         }"
       >
         <span
+          class="emoji"
           :style="{
             fontSize: size + 'px',
           }"
@@ -23,6 +24,7 @@
           {{ el.emoji }}
         </span>
         <span
+          class="emoji-label"
           :style="{
             textAlign: 'center',
             maxWidth: '100%',
@@ -187,15 +189,22 @@ export default {
   animation: none;
   cursor: pointer;
 }
-.reaction-button:hover {
-  filter: grayscale(0%) !important;
-  transform: scale(1.2);
-  animation: wiggle 1s infinite;
-}
+
 .reaction-button.active {
   filter: grayscale(0%) !important;
-  transform: scale(1.1);
+  /* transform: scale(1.1);  */
   text-shadow: rgb(255, 187, 0) 0px 0px 25px;
+}
+.reaction-button.active .emoji-label {
+  /* filter: grayscale(50%) !important; */
+  transform: unset;
+  /* text-shadow: rgb(255, 187, 0) 0px 0px 25px; */
+}
+
+.emoji:hover {
+  filter: grayscale(0%) !important;   
+  transform: scale(1.1);
+  animation: wiggle 1s infinite;
 }
 
 @keyframes wiggle {
