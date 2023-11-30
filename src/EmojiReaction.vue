@@ -8,16 +8,34 @@
         @click="handleClickReaction(el)"
         :class="{ active: activeReaction.name === el.name }"
         :style="{
-          fontSize: size + 'px',
           filter: grayscale && 'grayscale(100%)',
+          display: 'flex',
+          flexDirection: 'column',
+          width: size + 'px',
+          justifyContent: 'center',
         }"
       >
-        {{ el.emoji }}
+        <span
+          :style="{
+            fontSize: size + 'px',
+          }"
+        >
+          {{ el.emoji }}
+        </span>
+        <span
+          :style="{
+            textAlign: 'center',
+            maxWidth: '100%',
+          }"
+          v-if="label"
+        >
+          {{ el.other_name || el.name }}
+        </span>
       </div>
     </div>
-    <span v-if="label">{{
+    <!-- <span v-if="label">{{
       activeReaction.other_name || activeReaction.name || "-"
-    }}</span>
+    }}</span> -->
   </div>
 </template>
 
@@ -26,20 +44,12 @@ export default {
   name: "ReactionButton",
   emits: ["update:modelValue"],
   props: {
-    size: {
-      type: Number,
-      default: 60,
-    },
     modelValue: {
       type: Object,
       default: {
         name: "",
         other_name: "",
       },
-    },
-    grayscale: {
-      type: Boolean,
-      default: false,
     },
     emoji: {
       type: Array,
@@ -53,6 +63,14 @@ export default {
       // ],
     },
     label: {
+      type: Boolean,
+      default: false,
+    },
+    size: {
+      type: Number,
+      default: 60,
+    },
+    grayscale: {
       type: Boolean,
       default: false,
     },
@@ -162,7 +180,7 @@ export default {
 .inner-container {
   display: flex;
   width: 100%;
-  align-items: center;
+  align-items: start;
   justify-content: space-evenly;
 }
 
