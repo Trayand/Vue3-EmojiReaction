@@ -138,7 +138,6 @@ export default {
       }
       let output = { ...this.activeReaction };
       if (!this.bindWithEmoji) delete output.emoji;
-      console.log(output);
       this.$emit("update:modelValue", output);
     },
     setActiveReaction() {
@@ -153,7 +152,6 @@ export default {
     },
   },
   mounted() {
-    console.log(this.modelValue);
     this.setActiveReaction();
   },
   watch: {

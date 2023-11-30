@@ -1,7 +1,7 @@
 <script setup>
 import { computed, ref } from "vue";
-// import { EmojiReaction } from "@trayand/emoji-reaction";
-import EmojiReaction from './EmojiReaction.vue';
+import { EmojiReaction } from "@trayand/emoji-reaction";
+// import EmojiReaction from './EmojiReaction.vue';
 const value = ref({ name: "neutral" });
 </script>
 
