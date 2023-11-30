@@ -1,6 +1,6 @@
 {
   "name": "@trayand/emoji-reaction",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/EmojiReaction.js",
   "module": "dist/EmojiReaction.mjs",
   "files": [
