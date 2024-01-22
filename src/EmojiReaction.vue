@@ -19,6 +19,7 @@
           class="emoji"
           :style="{
             fontSize: size + 'px',
+            textAlign: 'center',
           }"
         >
           {{ el.emoji }}
@@ -35,9 +36,6 @@
         </span>
       </div>
     </div>
-    <!-- <span v-if="label">{{
-      activeReaction.other_name || activeReaction.name || "-"
-    }}</span> -->
   </div>
 </template>
 
@@ -104,6 +102,26 @@ export default {
           name: "smile",
           emoji: "😄",
         },
+        {
+          name: "star_eyes",
+          emoji: "🤩",
+        },
+        {
+          name: "heart_eyes",
+          emoji: "😍",
+        },
+        {
+          name: "cry",
+          emoji: "😢",
+        },
+        {
+          name: "pleading",
+          emoji: "🥺",
+        },
+        {
+          name: "joy",
+          emoji: "😂",
+        },
       ],
       activeReaction: this.modelValue || {},
     };
@@ -166,6 +184,7 @@ export default {
 
 <style scoped>
 .container {
+  user-select: nonec;
   margin: 30px auto;
   padding: 10px;
   width: 100%;
@@ -178,6 +197,7 @@ export default {
 }
 
 .inner-container {
+  user-select: none;
   display: flex;
   width: 100%;
   align-items: start;
@@ -185,6 +205,7 @@ export default {
 }
 
 .reaction-button {
+  user-select: none;
   display: inline-block;
   animation: none;
   cursor: pointer;
@@ -199,6 +220,11 @@ export default {
   /* filter: grayscale(50%) !important; */
   transform: unset;
   /* text-shadow: rgb(255, 187, 0) 0px 0px 25px; */
+}
+
+.emoji-label,
+.emoji {
+  user-select: none;
 }
 
 .emoji:hover {

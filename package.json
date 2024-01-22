@@ -1,13 +1,18 @@
 {
   "name": "@trayand/emoji-reaction",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "main": "dist/EmojiReaction.js",
   "module": "dist/EmojiReaction.mjs",
   "files": [
-    "dist/*"
+    "dist/*",
+    "src/EmojiReaction.vue"
   ],
   "private": false,
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "Trayand/Vue3-EmojiReaction"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite buuild",
@@ -18,16 +23,27 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@trayand/emoji-reaction": "^0.0.1",
     "@vitejs/plugin-vue": "^4.4.0",
     "rollup": "^4.6.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-vue": "^6.0.0",
-    "vite": "^4.4.11",
-    "vuepress": "^2.0.0-rc.0"
+    "vite": "^4.4.11"
   },
   "peerDependencies": {
     "vue": "^3.3.4"
-  }
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "vuejs",
+    "vue-component",
+    "component",
+    "vue.js",
+    "feedback",
+    "rate",
+    "reaction",
+    "emoji reaction",
+    "animation"
+  ]
 }

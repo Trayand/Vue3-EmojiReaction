@@ -2,6 +2,8 @@
 
 `Emoji Reaction` is a Vue3 based emoji reaction inspired by [VueFeedbackReaction](https://www.npmjs.com/package/vue-feedback-reaction)
 
+<img style="border-radius: 5px;" src="https://i.imgur.com/pBXjht6.gif" title="source: imgur.com" />
+
 ## Installation
 
 ```
@@ -33,7 +35,7 @@ _Note: you can use either Plugin or Component (no need to use both)_
 
 ### Implementation
 
-```
+```vue
 <script setup>
 import { computed, ref } from "vue";
 import { EmojiReaction } from "@trayand/emoji-reaction";
@@ -75,8 +77,8 @@ const value = ref({ name: "neutral" });
 
 List :
 
-- 😠 mad
-- 😟 worried
-- 😐 neutral
-- 🙂 slight_smile
-- 😄 smile
+|             |              |               |                 |
+| ----------- | ------------ | ------------- | --------------- |
+| 😠 mad      | 😟 worried   | 😐 neutral    | 🙂 slight_smile |
+| 😄 smile    | 🤩 star_eyes | 😍 heart_eyes | 😢 cry          |
+| 🥺 pleading | 😂 joy       |
